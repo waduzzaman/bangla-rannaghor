@@ -23,7 +23,7 @@ const Navbar = () => {
           href="/"
           className="text-3xl font-bold text-white cursor-pointer hover:text-teal-200 transition duration-150"
         >
-          বাংলা রান্নাঘর 🌶️
+          BanglaRannaghor 🌶️
         </Link>
 
         {/* Desktop Menu */}
