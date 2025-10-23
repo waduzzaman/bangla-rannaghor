@@ -21,7 +21,19 @@ export const initialRecipes = [
   { id: 15, slug: "chicken-rezala", title: "Chicken Rezala", excerpt: "A mild, Mughlai-influenced curry with chicken cooked in a white, nutty gravy.", image: "https://placehold.co/400x250/f97316/ffffff?text=Chicken+Rezala", category: "Meat Curries", prepTime: "30 min", cookTime: "45 min", ingredients: ["Chicken", "Cashew Paste", "Poppy Seeds", "Kewra Water", "Yogurt"], instructions: ["Marinate chicken.", "Cook in a white gravy of nuts and yogurt.", "Finish with aromatic water."] },
   { id: 16, slug: "dimer-dalna", title: "Dimer Dalna (Egg Curry)", excerpt: "Hard-boiled eggs cooked in a simple, flavorful tomato and potato gravy.", image: "https://placehold.co/400x250/a855f7/ffffff?text=Dimer+Dalna", category: "Meat Curries", prepTime: "20 min", cookTime: "30 min", ingredients: ["Eggs", "Potatoes", "Tomato", "Ginger", "Cumin"], instructions: ["Fry boiled eggs.", "Make a potato and tomato gravy.", "Simmer eggs in the gravy."] },
   { id: 17, slug: "beef-aloo-jhol", title: "Beef and Potato Curry", excerpt: "A thin, hearty curry featuring tender beef and soft potatoes, ideal with rice.", image: "https://placehold.co/400x250/ef4444/ffffff?text=Beef+Aloo+Jhol", category: "Meat Curries", prepTime: "20 min", cookTime: "75 min", ingredients: ["Beef", "Potatoes", "Onion", "Turmeric", "Coriander"], instructions: ["Brown the beef.", "Add potatoes and cook with spices.", "Add water and pressure cook until soft."] },
-  { id: 18, slug: "chicken-jhal-fry", title: "Chicken Jhal Fry", excerpt: "A dry, spicy chicken stir-fry with peppers, onions, and lots of chilies.", image: "https://placehold.co/400x250/0ea5e9/ffffff?text=Chicken+Jhal+Fry", category: "Meat Curries", prepTime: "15 min", cookTime: "25 min", ingredients: ["Chicken Strips", "Bell Peppers", "Onions", "Soy Sauce", "Hot Chili Sauce"], instructions: ["Stir-fry vegetables and chicken.", "Add sauces and spices.", "Cook until dry and heavily coated."] },
+  {
+  id: 18,
+  slug: "chicken-jhal-fry",
+  title: "Chicken Jhal Fry",
+  excerpt: "A dry, spicy chicken stir-fry with peppers, onions, and lots of chilies.",
+  image: "https://placehold.co/400x250/0ea5e9/ffffff?text=Chicken+Jhal+Fry",
+  category: "Meat Curries",
+  prepTime: "15 min",
+  cookTime: "25 min",
+  ingredients: ["Chicken Strips", "Bell Peppers", "Onions", "Soy Sauce", "Hot Chili Sauce"],
+  instructions: ["Stir-fry vegetables and chicken.", "Add sauces and spices.", "Cook until dry and heavily coated."],
+  youtubeId: "_aT_-AkrSdY"  // <-- Add this line
+},
 
   // --- Vegetable Bhaji (5) ---
   { id: 19, slug: "aloo-bhaji", title: "Aloo Bhaji (Potato Fry)", excerpt: "Simple, finely diced potatoes fried with turmeric and onions.", image: "https://placehold.co/400x250/facc15/000000?text=Aloo+Bhaji", category: "Vegetable Bhaji", prepTime: "10 min", cookTime: "20 min", ingredients: ["Potatoes", "Onion", "Turmeric", "Green Chilies", "Mustard Oil"], instructions: ["Dice potatoes finely.", "Fry onions and chilies.", "Add potatoes and spices; cook until soft and crisp."] },
@@ -57,7 +69,9 @@ export const initialRecipes = [
   { id: 41, slug: "cham-cham", title: "Cham Cham", excerpt: "An elongated sweet made from chhena, cooked in syrup and coated in coconut.", image: "https://placehold.co/400x250/84cc16/000000?text=Cham+Cham", category: "Desserts", prepTime: "40 min", cookTime: "35 min", ingredients: ["Chhena", "Sugar", "Saffron", "Coconut Flakes"], instructions: ["Shape chhena into cylinders.", "Cook in syrup.", "Coat with coconut and garnish."] },
   { id: 42, slug: "shondesh", title: "Shondesh", excerpt: "A dry sweet made from chhena and jaggery or sugar, often molded into decorative shapes.", image: "https://placehold.co/400x250/22d3ee/000000?text=Shondesh", category: "Desserts", prepTime: "30 min", cookTime: "10 min", ingredients: ["Chhena", "Sugar/Jaggery", "Cardamom"], instructions: ["Heat chhena and sugar until smooth.", "Remove from heat and knead.", "Press into molds and chill."] },
   { id: 43, slug: "gulab-jamun", title: "Gulab Jamun", excerpt: "Deep-fried milk solids (khoya) balls soaked in rose-flavored sugar syrup.", image: "https://placehold.co/400x250/db2777/ffffff?text=Gulab+Jamun", category: "Desserts", prepTime: "30 min", cookTime: "20 min", ingredients: ["Khoya (Milk Solids)", "Flour", "Sugar Syrup", "Rose Water"], instructions: ["Mix khoya and flour into dough.", "Fry balls until dark.", "Soak in warm syrup."] },
-  { id: 44, slug: "firni", title: "Firni (Rice Pudding)", excerpt: "A creamy, thick rice pudding made with ground rice, milk, and saffron.", image: "https://placehold.co/400x250/fcd34d/000000?text=Firni", category: "Desserts", prepTime: "15 min", cookTime: "60 min", ingredients: ["Milk", "Ground Rice", "Sugar", "Saffron", "Pistachios"], instructions: ["Boil milk and sugar.", "Add ground rice and cook until thick.", "Chill and serve with nuts."] },
+  { id: 44, slug: "firni", title: "Firni (Rice Pudding)", excerpt: "A creamy, thick rice pudding made with ground rice, milk, and saffron.", image: "https://placehold.co/400x250/fcd34d/000000?text=Firni", category: "Desserts", prepTime: "15 min", cookTime: "60 min", ingredients: ["Milk", "Ground Rice", "Sugar", "Saffron", "Pistachios"], instructions: ["Boil milk and sugar.", "Add ground rice and cook until thick.", "Chill and serve with nuts."] ,
+    youtubeId: "MDoNDYzWNfE" 
+  },
 
   // --- Daals & Soups (6) ---
   { id: 45, slug: "masoor-dal-torka", title: "Masoor Dal Torka", excerpt: "Red lentils cooked until soft and finished with a tempering (torka) of spices.", image: "https://placehold.co/400x250/f97316/ffffff?text=Masoor+Dal", category: "Daals & Soups", prepTime: "10 min", cookTime: "40 min", ingredients: ["Masoor Dal", "Garlic", "Dried Red Chilies", "Cumin Seeds", "Ghee"], instructions: ["Boil dal with turmeric and salt.", "Prepare torka by frying spices in ghee.", "Pour torka over the dal."] },

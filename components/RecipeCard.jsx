@@ -1,46 +1,51 @@
-// /components/RecipeCard.jsx
 "use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-const RecipeCard = ({ recipe }) => (
-  <div className="max-w-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-white transform hover:-translate-y-1">
-    <div className="relative h-48">
-      <Image // <--- Change to <Image> if it was <img> before, and add the prop
-      src={recipe.image}
-      alt={recipe.title}
-      width={400} // Required for <Image>
-      height={250} // Required for <Image>
-      className="w-full h-48 object-cover group-hover:scale-[1.03] transition duration-500"
-      unoptimized={true} // <--- FIX: Add this property
-    />
-      <span className="absolute top-2 right-2 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-        {recipe.category}
-      </span>
-    </div>
-    <div className="p-5">
-      <Link href={`/recipes/${recipe.slug}`} className="font-bold text-xl mb-2 text-gray-900 hover:text-teal-600 transition cursor-pointer">
-        {recipe.title}
-      </Link>
-      <p className="text-gray-700 text-base mb-4">
-        {recipe.excerpt}
-      </p>
-      <div className="flex space-x-4 text-sm text-gray-600 border-t pt-3">
-        <span><span role="img" aria-label="prep time">⏱</span> {recipe.prepTime}</span>
-        <span><span role="img" aria-label="cook time">🔥</span> {recipe.cookTime}</span>
+export default function RecipeCard({ recipe }) {
+  return (
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-200">
+      {/* Video or Placeholder Image */}
+      <div className="w-full h-56 sm:h-64 md:h-48 lg:h-56 relative">
+        {recipe.youtubeId ? (
+          <iframe
+            className="w-full h-full"
+            src={`https://www.youtube.com/embed/${recipe.youtubeId}`}
+            title={recipe.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          <Image
+            src={
+              recipe.image ||
+              "https://placehold.co/400x250/2dd4bf/000000?text=Recipe+Photo"
+            }
+            alt={recipe.title}
+            fill
+            className="object-cover"
+            unoptimized
+          />
+        )}
+      </div>
+
+      {/* Recipe Info */}
+      <div className="p-4">
+        <h3 className="text-xl font-bold text-teal-700 mb-2">{recipe.title}</h3>
+        <p className="text-gray-600 text-sm mb-2">{recipe.excerpt}</p>
+        <p className="text-gray-500 text-xs font-semibold">
+          {recipe.category} • ⏱ {recipe.prepTime} • 🔥 {recipe.cookTime}
+        </p>
+        <Link
+          href={`/recipes/${recipe.slug}`}
+          className="mt-3 inline-block text-teal-600 hover:text-teal-800 font-semibold text-sm"
+        >
+          View Recipe →
+        </Link>
       </div>
     </div>
-    <div className="px-5 pb-5">
-      <Link
-        href={`/recipes/${recipe.slug}`}
-        className="block text-center w-full bg-teal-600 text-white font-semibold py-2 rounded-lg hover:bg-teal-700 transition duration-200 shadow-md"
-      >
-        View Recipe →
-      </Link>
-    </div>
-  </div>
-);
-
-export default RecipeCard;
+  );
+}
