@@ -11,9 +11,6 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    allowedDevOrigins: ['http://localhost:3000'], // Add your dev origin here
-  },
 };
 
 export default nextConfig;
